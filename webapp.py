@@ -9,7 +9,12 @@ def render_main():
     return render_template('index.html')
 
 def get_state_options():
-    return 
+    states= []
+    options=""
+    for c in counties:
+        if c["State"] not in states:
+            states.append(c["State"])
+            options += Markup("<option value=\"" + s + "\">" + s + "</option>")
 
 if __name__=="__main__":
     app.run(debug=False, port=54321)
