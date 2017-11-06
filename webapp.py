@@ -17,7 +17,7 @@ def get_state_options(counties):
         if c["State"] not in states:
             states.append(c["State"])
             #state_name and fun_fact
-            options += Markup("<option value=\"" + s + "\">" + s + "</option>")
+            options += Markup("<option value=\"" + c["State] + "\">" + c["State] + "</option>")
     return options
 
 def state_with_most_counties(counties, state):
