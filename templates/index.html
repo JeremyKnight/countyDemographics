@@ -4,8 +4,13 @@
     <title>County Demographics</title>
   </head>
   <body>
-    
+    <h1>select a state to find a fun fact!</h1>
      <select name="states">
       <option value={{state_name}}>{{fun_fact}}</option>
     </select>
+   
+    {% if response is defined %}
+            <p> {{ response }}</p>
+    {% endif %}
+  
   </body>
