@@ -13,7 +13,7 @@ def render_main():
     #return render_template('index.html')
 
 def get_state_options(counties):
-    '''states= []
+    states= []
     options=""
     for c in counties:
         if c["State"] not in states:
@@ -22,7 +22,7 @@ def get_state_options(counties):
             state=state_counties(counties, c["State"])
             options += Markup("<option value=\"" + c["State"] + "\">" + state + "</option>")
     #allStates = states 
-    return options'''
+    return options
 
 def state_counties(counties, state):
     """Return the state with the average number of percent under of 18"""
