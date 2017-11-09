@@ -6,13 +6,7 @@
   <body>
     <h1>select a state to find a fun fact!</h1>
      <select name="states">
-       <!--script>
-         
-         for(i=0;i<statesArray.length;i++) {
-           
-         }
-       </script-->
-      <option value={{state_name}}>{{fun_fact}}</option>
+       {{options}}
     </select>
    
     {% if response is defined %}
