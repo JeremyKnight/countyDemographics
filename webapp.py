@@ -9,7 +9,6 @@ allStates=""
 def render_main():
     with open('county_demographics.json') as demographics_data:
         counties = json.load(demographics_data)
-        state = 
         return render_template('index.html', "state_name" = get_state_options(counties) "fun_fact"=state_with_most_counties(counties, state))
     #return render_template('index.html')
 
