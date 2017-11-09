@@ -12,7 +12,7 @@ def render_main():
         #return render_template('index.html', "options" = get_state_options(counties)
     return render_template('index.html')
 
-'''def get_state_options(counties):
+def get_state_options(counties):
     states= []
     options=""
     for c in counties:
@@ -32,7 +32,7 @@ def state_counties(counties, state):
         if state == c["State"]:
             i+=c["Percent Under 18 Years"]
             count+=1
-    return i/count '''
+    return i/count
 
 if __name__=="__main__":
     app.run(debug=False, port=54321)
