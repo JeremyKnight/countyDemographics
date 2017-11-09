@@ -9,8 +9,8 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_main():
     with open('county_demographics.json') as demographics_data:
         counties = json.load(demographics_data)
-        #return render_template('index.html', "options" = get_state_options(counties)
-    return render_template('index.html')
+        return render_template('index.html', "options" = get_state_options(counties)
+    #return render_template('index.html')
 
 def get_state_options(counties):
     states= []
@@ -19,8 +19,8 @@ def get_state_options(counties):
         if c["State"] not in states:
             states.append(c["State"])
             #state_name and fun_fact
-            #options += Markup("<option value=\"" + c["State"] + "\">" + c["State"] + "</option>")
-            options += Markup("<option value=\"" + c["State"] + "\">" + state_counties(counties, c["State"]) + "</option>")
+            options += Markup("<option value=\"" + c["State"] + "\">" + c["State"] + "</option>")
+            #options += Markup("<option value=\"" + c["State"] + "\">" + state_counties(counties, c["State"]) + "</option>")
     #allStates = states
     return options
 
