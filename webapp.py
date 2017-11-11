@@ -9,10 +9,10 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_main():
     with open('county_demographics.json') as demographics_data:
         counties = json.load(demographics_data)
-        return render_template('index.html', "options" = get_state_options(counties))
+        return render_template('index.html', "options" = "")#get_state_options(counties))
     #return render_template('index.html')
 
-def get_state_options(counties):
+'''def get_state_options(counties):
     states= []
     options=""
     for c in counties:
@@ -24,7 +24,7 @@ def get_state_options(counties):
     #allStates = states 
     return options
 
-'''def state_counties(counties, state):
+def state_counties(counties, state):
     """Return the state with the average number of percent under of 18"""
     count=0
     i=0
