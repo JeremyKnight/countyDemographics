@@ -30,7 +30,7 @@ def state_counties(counties, state):
     i=0
     for c in counties:
         if state == c["State"]:
-            i+=c["Percent Under 18 Years"]
+            i+=c["Age"]["Percent Under 18 Years"]
             count+=1
     return i/count
 
