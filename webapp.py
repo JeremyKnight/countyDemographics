@@ -12,7 +12,7 @@ def render_main():
         return render_template('index.html', options = get_state_options(counties))
     #return render_template('index.html')
 
-'''def get_state_options(counties):
+def get_state_options(counties):
     states= []
     options=""
     for c in counties:
@@ -24,7 +24,7 @@ def render_main():
     #allStates = states 
     return options
 
-def state_counties(counties, state):
+'''def state_counties(counties, state):
     """Return the state with the average number of percent under of 18"""
     count=0
     i=0
