@@ -19,8 +19,8 @@ def get_state_options(counties):
         if c["State"] not in states:
             states.append(c["State"])
             #state_name and fun_fact
-            state=str(state_counties(counties, c["State"]))
-            options += Markup("<option value=\"" + c["State"] + "\">" + state + "</option>")
+            #state=str(state_counties(counties, c["State"]))
+            options += Markup("<option value=\"" + c["State"] + "\">" + c["State"] + "</option>")
     #allStates = states 
     return options
 
