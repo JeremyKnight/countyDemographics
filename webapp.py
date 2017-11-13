@@ -9,7 +9,9 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_main():
     with open('county_demographics.json') as demographics_data:
         counties = json.load(demographics_data)
-        return render_template('index.html', options = get_state_options(counties))
+        if 'states' in request.args:
+            state = request.args['states']
+            return render_template('index.html', options = get_state_options(counties), response = state_counties(counties,state))
     #return render_template('index.html')
 
 def get_state_options(counties):
