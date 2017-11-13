@@ -12,7 +12,7 @@ def render_main():
         if 'states' in request.args:
             state = request.args['states']
             return render_template('index.html', options = get_state_options(counties), response = state_counties(counties,state))
-         else:
+        else:
             return render_template('index.html', options = get_state_options(counties))
 
 def get_state_options(counties):
