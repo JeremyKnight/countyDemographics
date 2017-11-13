@@ -11,7 +11,7 @@ def render_main():
         counties = json.load(demographics_data)
         if 'states' in request.args:
             state = request.args['states']
-            this_response="average number of percent under 18 years old in " + state + ":" + str(state_counties(counties,state))
+            this_response="average number of percent under 18 years old in " + state + ": " + str(state_counties(counties,state))
             return render_template('index.html', options = get_state_options(counties), response = this_response)
         else:
             return render_template('index.html', options = get_state_options(counties))
